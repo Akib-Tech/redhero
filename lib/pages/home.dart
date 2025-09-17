@@ -508,50 +508,190 @@ class HomePage extends StatelessWidget  {
                     //End Activities Panel
 
                     //Tracking Donor
+                        SizedBox(height:20),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Track My Donor", style:TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color:Color(0xff202020))),
+                        ),
 
+                        SizedBox(height:20),
                         Container(
                             padding: EdgeInsets.all(5),
                             decoration:BoxDecoration(
-                                color: Color(0xffE9EFFF),
+                                color: Color(0xffffffff),
                                 border: Border.all(
-                                  color:Color(0xffA1BDFF),
+                                  color:Color(0xffffffff),
                                   width:1,
                                 ),
                                 borderRadius: BorderRadius.circular(4)
                             ),
-                            child: Column(
+                            child: Row(
+                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Padding(
-                                  padding:EdgeInsets.only(left:10),
-
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("Announcement", style: TextStyle(color:Color(0xff004CFF)),),
+                                Container(
+                                  decoration:BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8)
+                                  ),
+                                  child: Image.asset("../assets/images/map.png",
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                SizedBox(width:10),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Expanded(
-                                        child: Padding(
-                                            padding: EdgeInsets.only(left: 10),
-                                            child:Text("We just updated our policy. following the publication made by the European Union and World Health Organization...",softWrap: true,)
-                                        ) ),
-                                    Container(
-                                        padding: EdgeInsets.only(right:10),
-                                        child: Icon(
-                                            Icons.navigate_next,
-                                            size: 30,
-                                            color:Color(0xff004CFF)
-                                        ) ),
+                                    Text("Michael Jordan",style:TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                                    SizedBox(height:3),
+                                     Text("Lagos State Specialist Hospital",style:TextStyle(fontSize: 12,fontWeight: FontWeight.w400),),
+
+
+                                    SizedBox(height:20),
+                                    Text("Estimating Arrival Time",style:TextStyle(fontSize: 8,fontWeight: FontWeight.w400, color:Color(0xffde2828))),
+                                    SizedBox(height:3),
+                                    Text("25:00 mins",style:TextStyle(fontSize: 12,fontWeight: FontWeight.w600, color:Color(0xffde2828))),
                                   ],
                                 )
                               ],
+                            ),
 
-                            )
                         ),
 
                     //End Tracking Donor
+
+
+                    //Blood Group Needed
+
+                        SizedBox(height:20),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Blood Group Needed", style:TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color:Color(0xff202020))),
+                        ),
+                        SizedBox(height:20),
+
+
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration:BoxDecoration(
+                              color: Color(0xffffffff),
+                              border: Border.all(
+                                color:Color(0xffffffff),
+                                width:1,
+                              ),
+                              borderRadius: BorderRadius.circular(4)
+                          ),
+                          child: Row(
+                            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                            Expanded(
+                              child: Container(
+                                decoration:BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8)
+                                ),
+                                child:   Row(
+                                //crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //Blood Group Row
+                                  Expanded(
+                                    child: Container(
+                                    margin: const EdgeInsets.all(4),
+                                    padding:const EdgeInsets.symmetric(vertical: 20,horizontal: 0),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color(0xffFFF0EE),
+                                          width:2
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      borderRadius: BorderRadius.circular(8),
+                                      child:Icon(Icons.bluetooth_connected, color: Color(0xffDE2828), size: 20),
+
+                                    ),
+                                  ),
+                                 ),
+
+
+                                  Expanded(
+                                    child:  Container(
+                                    margin: const EdgeInsets.all(4),
+                                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 0),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color(0xffFFF0EE),
+                                          width:2
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      borderRadius: BorderRadius.circular(8),
+                                      child: Icon(Icons.bluetooth_connected, color: Color(0xffDE2828), size: 20),
+
+                                    ),
+                                  ),
+                                ),
+
+                                  Expanded(
+                                   child: Container(
+                                    margin: const EdgeInsets.all(4),
+                                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 0),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color(0xffFFF0EE),
+                                          width:2
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      borderRadius: BorderRadius.circular(8),
+                                      child:Icon(Icons.bluetooth_connected, color: Color(0xffDE2828), size: 20),
+                                    ),
+                                  ),
+                                ),
+
+                                  Expanded(
+                                 child: Container(
+                                    margin: const EdgeInsets.all(4),
+                                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 0),
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Color(0xffFFF0EE),
+                                          width:2
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      borderRadius: BorderRadius.circular(4),
+                                      child:
+                                          Icon(Icons.bluetooth_connected, color: Color(0xffDE2828), size: 20),
+                                    ),
+                                  ),
+                                  ),
+
+
+                                //Blood Group row
+
+
+                                ],
+                              ),
+                              ),
+                            ),
+                            ],
+
+                          ),
+
+                        ),
+
+                    //Blood Group Needed
+
+
+
+
                       ],
                     ),
                       //Page Column
