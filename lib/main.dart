@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/intro_page.dart';
+import 'package:red_hero/pages/login.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -13,17 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color:Colors.white,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Red Hero',
       theme: ThemeData(
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home : HomePage(),
+      home : LandingPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget{ 
-   const HomePage({super.key});
+class LandingPage extends StatelessWidget{
+   const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -42,11 +42,10 @@ class HomePage extends StatelessWidget{
              onTap : (){
               Navigator.push( context,
               MaterialPageRoute(
-                builder: (context) => IntroPage()
+                builder: (context) => LoginPage()
                 ) );
                  } ),
-            
- 
+
        )
           );
 

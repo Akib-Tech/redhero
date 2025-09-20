@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:red_hero/pages/forgetpassword.dart';
+import 'package:red_hero/pages/forgot_password.dart';
+import 'package:red_hero/widgets/dashboard.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -152,7 +153,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ForgetPassword(),
+                            builder: (context) => Dashboard(),
                           ),
                         );
                       },
@@ -229,7 +230,9 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 12),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard(),));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
@@ -251,7 +254,7 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
+                          color: Colors.black26,
                           spreadRadius: 2,
                           blurRadius: 8,
                           offset: const Offset(0, 4),
